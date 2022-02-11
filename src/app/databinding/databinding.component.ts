@@ -16,7 +16,7 @@ UserName:string='';
 
   getUserName = (event: any) => {
     console.log(event.target.value);
-    this.UserName = event.target.value; 
+    this.UserName = event.target.value;  
   }
   
   ngOnInit(): void {
