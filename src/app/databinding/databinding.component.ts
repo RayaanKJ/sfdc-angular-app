@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-databinding',
@@ -9,17 +10,27 @@ export class DatabindingComponent implements OnInit {
 
   constructor() { }
 
-labelName='Employee Name :';
-labelName2='Password :';
+labelName='Enter Username';
+labelName2='Enter Password ';
 UserName:string='';
+Password:string='';
 
-
+ngOnInit(): void {
+}
   getUserName = (event: any) => {
     console.log(event.target.value);
     this.UserName = event.target.value;  
   }
   
-  ngOnInit(): void {
-  }
+
+
+  getPassword=(event:any)=>{
+    console.log(event.target.value);
+   this.Password=event.target.value;  
+     }
+     
+     onBlur(fc:any){
+      console.log(fc);
+    }
 
 }
